@@ -7,22 +7,30 @@ import type { GiphyResponse } from '../interfaces/giphy.interfaces';
 export class GifsService {
 
   private http = inject(HttpClient)
+  trendingGifs = signal<Gif[]>([]);
 
   constructor(){
 
-    this.loadTrendingGifs();
+this.loadTrendingGifs();  
+
+    
   }
 
   loadTrendingGifs(){
-    this.http.get<GiphyResponse>(`${ environment.giphyUrl}/gifs/trending`), {
+    this.http.get<GiphyResponse>(`${ environment.giphyUrl}/gifs/trending`, {
       params: {
         api_key: environment.giphyapiKey,
         limit: 20,
 
-      }
-    }
+      },
+    })
+    .subscribe(( resp ) => {
+      const gifs = GifMapper.mapGiphyItemsToGifArray(resp.data);
+      this.trendingGifs.set(gifs);
 
+      console.log({ gifs });
 
+    })
 
 
   }
