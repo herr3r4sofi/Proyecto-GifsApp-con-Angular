@@ -3,20 +3,20 @@ import { GifList } from "../../components/gif-list/gif-list";
 import { GifListItem } from "../../components/gif-list/gif-list-item/gif-list-item";
 import { GifsService } from "../../services/gifs.service";
 
-const imageUrls: string[] = [
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg"
-];
+// const imageUrls: string[] = [
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg',
+//   'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg',
+// ];
 
 
 
@@ -25,11 +25,6 @@ const imageUrls: string[] = [
   imports: [GifList],
   templateUrl: './trending-page.html',
 })
-export default class TrendingPage {
-
-gifs = signal(imageUrls);
-
-gifsService = inject( GifsService ); 
-
-
+export default class TrendingPageComponent {
+  gifService = inject(GifService);
 }
