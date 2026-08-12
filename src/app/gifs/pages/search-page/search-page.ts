@@ -15,12 +15,12 @@ export default class SearchPage {
 
 
   onSearch(query: string) {
-  this.gifService.searchGifs(query).subscribe((resp) => {
-  this.gifs.set(resp);
-  
+    this.gifService.searchGifs(query).subscribe((resp) => {
+      this.gifs.set(resp);
 
 
 
-  });
-}
+
+    });
+  }
 }
