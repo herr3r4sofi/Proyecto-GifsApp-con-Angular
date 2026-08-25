@@ -21,7 +21,6 @@ const loadFromLocalStorage = () => {
 
 }
 
-
 @Injectable({ providedIn: 'root' })
 export class GifsService {
 
