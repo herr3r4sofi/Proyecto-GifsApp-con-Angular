@@ -30,6 +30,7 @@ export default class TrendingPageComponent implements AfterViewInit {
     const scrollTop = scrollDiv.scrollTop;
     const clientHeight = scrollDiv.clientHeight;
     const scrollHeight = scrollDiv.scrollHeight;
+    
 
     // console.log({ scrollTotal: scrollTop + clientHeight, scrollHeight });
     const isAtBottom = scrollTop + clientHeight + 300 >= scrollHeight;
