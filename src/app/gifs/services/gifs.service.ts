@@ -6,19 +6,12 @@ import { GifMapper } from '../mapper/gif.mapper';
 import { Gif } from '../interfaces/gif.interface';
 import { map, Observable, tap } from 'rxjs';
 
-
-
 const GIF_KEY = 'gifs';
-
 
 const loadFromLocalStorage = () => {
   const gifsFromLocalStorage = localStorage.getItem('GIF_KEY') ?? '{}';
   const gifs = JSON.parse(gifsFromLocalStorage);
   return gifs;
-
-
-
-
 }
 
 @Injectable({ providedIn: 'root' })
@@ -94,7 +87,6 @@ export class GifsService {
         }));
       })
     );
-
 
     //.subscribe(( resp ) => {
     //  const gifs = GifMapper.mapGiphyItemsToGifArray(resp.data)
